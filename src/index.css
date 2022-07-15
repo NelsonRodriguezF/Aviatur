@@ -232,8 +232,15 @@ main{
 .slide{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     padding: 1% 3%;
+    width: 3000px;
+    gap: 50px;
+    overflow-x: hidden;
+    cursor: grab;
+}
+
+.slide img{
+    width: 100%;
 }
 
 .img-inf{

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion'
 
 import '../../public/img/Rectangle10.png';
 import '../../public/img/Rectangle11.png';
@@ -32,18 +33,18 @@ export const Main = () => {
                     {/* <!--Vuelos Recomendados--> */}
                     <h3 className="recommended">Vuelos Recomendados</h3>
 
-                    <div className="slide">
-                        {/* {images.map( (image, id) => {
+                    <motion.div className="slide" drag="x" dragConstraints={{right: 0, left: -1000}}>
+                        {images.map( (image, id) => {
                             return (
-                                <div className="img-inf">
+                                <motion.div className="img-inf">
                                     <img src={image.image} alt={image.city}/>
                                     <p className="country">{image.city}</p>
                                     <p className="price">${image.price}cop</p>
-                                </div>
+                                </motion.div>
                             )
-                        })} */}
+                        })}
 
-                        <div className="img-inf">
+                        {/* <div className="img-inf">
                             <img src="/public/img/Rectangle10.png" alt=""/>
                             <p className="country">Medellin, Colombia</p>
                             <p className="price">$356.032 cop</p>
@@ -57,8 +58,8 @@ export const Main = () => {
                             <img src="/public/img/Rectangle12.png" alt=""/>
                             <p className="country">Ciudad de Panamá, Panamá</p>
                             <p className="price">$886.032 cop</p>
-                        </div>
-                    </div>
+                        </div> */}
+                    </motion.div>
 
                     {/* <!--Paquetes imperdibles--> */}
                     <h3 className="recommended">Paquetes imperdibles</h3>
